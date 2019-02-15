@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">My Website</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="stats.html">Statistics</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="mean-whole-universe" class="section level4">
+<h4>Mean whole universe</h4>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Universe</th>
+<th align="right">Denmark</th>
+<th align="right">Finland</th>
+<th align="right">Norway</th>
+<th align="right">Sweden</th>
+<th align="right">Healthcare</th>
+<th align="right">Consumer Cyclicals</th>
+<th align="right">Energy</th>
+<th align="right">Financials</th>
+<th align="right">Industrials</th>
+<th align="right">Consumer Non-Cyclicals</th>
+<th align="right">Utilities</th>
+<th align="right">Basic Materials</th>
+<th align="right">Telecommunications Services</th>
+<th align="right">Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SMA IMPROVEMENT</td>
+<td align="right">1.9166667</td>
+<td align="right">2.1764706</td>
+<td align="right">0.8387097</td>
+<td align="right">3.3333333</td>
+<td align="right">1.6808511</td>
+<td align="right">-0.3750000</td>
+<td align="right">-1.2380952</td>
+<td align="right">3.6923077</td>
+<td align="right">2.0526316</td>
+<td align="right">1.7073171</td>
+<td align="right">3.789474</td>
+<td align="right">8.0000000</td>
+<td align="right">4.5714286</td>
+<td align="right">4.2222222</td>
+<td align="right">-1.5000000</td>
+</tr>
+<tr class="even">
+<td>VOL IMPROVEMENT</td>
+<td align="right">1.8750000</td>
+<td align="right">4.1764706</td>
+<td align="right">1.0322581</td>
+<td align="right">0.9696970</td>
+<td align="right">1.6382979</td>
+<td align="right">4.6250000</td>
+<td align="right">2.0000000</td>
+<td align="right">1.5384615</td>
+<td align="right">-0.6315789</td>
+<td align="right">2.6341463</td>
+<td align="right">3.263158</td>
+<td align="right">5.0000000</td>
+<td align="right">-1.5238095</td>
+<td align="right">2.4444444</td>
+<td align="right">6.5000000</td>
+</tr>
+<tr class="odd">
+<td>COMBO</td>
+<td align="right">3.7916667</td>
+<td align="right">6.3529412</td>
+<td align="right">1.8709677</td>
+<td align="right">4.3030303</td>
+<td align="right">3.3191489</td>
+<td align="right">4.2500000</td>
+<td align="right">0.7619048</td>
+<td align="right">5.2307692</td>
+<td align="right">1.4210526</td>
+<td align="right">4.3414634</td>
+<td align="right">7.052632</td>
+<td align="right">13.0000000</td>
+<td align="right">3.0476190</td>
+<td align="right">6.6666667</td>
+<td align="right">5.0000000</td>
+</tr>
+<tr class="even">
+<td>HIGH VOL REGIME</td>
+<td align="right">5.6666667</td>
+<td align="right">10.5294118</td>
+<td align="right">2.9032258</td>
+<td align="right">5.2727273</td>
+<td align="right">4.9574468</td>
+<td align="right">8.8750000</td>
+<td align="right">2.7619048</td>
+<td align="right">6.7692308</td>
+<td align="right">0.7894737</td>
+<td align="right">6.9756098</td>
+<td align="right">10.315789</td>
+<td align="right">18.0000000</td>
+<td align="right">1.5238095</td>
+<td align="right">9.1111111</td>
+<td align="right">11.5000000</td>
+</tr>
+<tr class="odd">
+<td>LOW VOL REGIME</td>
+<td align="right">5.7083333</td>
+<td align="right">8.5294118</td>
+<td align="right">2.7096774</td>
+<td align="right">7.6363636</td>
+<td align="right">5.0000000</td>
+<td align="right">3.8750000</td>
+<td align="right">-0.4761905</td>
+<td align="right">8.9230769</td>
+<td align="right">3.4736842</td>
+<td align="right">6.0487805</td>
+<td align="right">10.842105</td>
+<td align="right">21.0000000</td>
+<td align="right">7.6190476</td>
+<td align="right">10.8888889</td>
+<td align="right">3.5000000</td>
+</tr>
+<tr class="even">
+<td>NET DMI</td>
+<td align="right">0.4629583</td>
+<td align="right">0.4839244</td>
+<td align="right">0.4364763</td>
+<td align="right">0.4526239</td>
+<td align="right">0.4677363</td>
+<td align="right">0.4831765</td>
+<td align="right">0.4678198</td>
+<td align="right">0.4670699</td>
+<td align="right">0.4393700</td>
+<td align="right">0.4858235</td>
+<td align="right">0.453337</td>
+<td align="right">0.3488204</td>
+<td align="right">0.4616594</td>
+<td align="right">0.4338048</td>
+<td align="right">0.4780078</td>
+</tr>
+<tr class="odd">
+<td>MA COUNT</td>
+<td align="right">1.0104167</td>
+<td align="right">0.8823529</td>
+<td align="right">0.8387097</td>
+<td align="right">1.0909091</td>
+<td align="right">1.0851064</td>
+<td align="right">0.7500000</td>
+<td align="right">0.7619048</td>
+<td align="right">1.1538462</td>
+<td align="right">1.0789474</td>
+<td align="right">0.9756098</td>
+<td align="right">1.210526</td>
+<td align="right">1.5000000</td>
+<td align="right">1.2857143</td>
+<td align="right">1.1111111</td>
+<td align="right">0.5833333</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

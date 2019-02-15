@@ -1,0 +1,9 @@
+---
+output: html_document
+---
+
+#### Mean whole universe
+
+```{r setup, echo=FALSE}
+knitr::kable(stats)
+```

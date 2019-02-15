@@ -1,0 +1,16 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+> **Alchemy data table** (updated `r Sys.time()`)
+
+```{r cars, message=FALSE, echo=FALSE}
+datatable(data_alc, filter = 'top',extensions = c('FixedHeader','Buttons','FixedHeader'),
+  options = list(dom = 'Bfrtip', buttons = c('colvis','excel'), pageLength = nrow(data_alc), fixedHeader = TRUE)) %>% formatRound(1:ncol(data_alc), 2) %>% formatStyle(45:ncol(data_alc),backgroundColor = styleInterval(0, c('red', 'green'))
+  ) 
+```
